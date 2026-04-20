@@ -1,3 +1,6 @@
+<img width="882" height="155" alt="Captura desde 2026-04-19 14-08-12" src="https://github.com/user-attachments/assets/9b07a4b8-f69f-4157-b16d-16d15cfbd513" />
+
+
 # anomChat
 
 A secure, encrypted command-line chat application built in Go. anomChat enables anonymous peer-to-peer communication between a client and server using AES-256 encryption with automatic key derivation.
