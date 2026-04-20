@@ -1,0 +1,31 @@
+name: Go Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.26.2'
+
+    - name: Build
+      run: go build -o anomchat .
+
+    - name: Test
+      run: go test -v ./...
+
+    - name: Upload binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: anomchat
+        path: anomchat
